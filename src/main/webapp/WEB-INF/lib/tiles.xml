@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/views/classic.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/basefragments/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/basefragments/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/basefragments/footer.jsp" />
+    </definition>
+
+    <!-- Home Page -->
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Home Page" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/home.jsp" />
+    </definition>
+
+    <!-- ContactUs Page -->
+    <definition name="contactUsPage" extends="base.definition">
+        <put-attribute name="title" value="Contact Us" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/contact_us.jsp" />
+    </definition>
+
+    <!--Advetisement Page-->
+    <definition name="ads/show" extends="base.definition">
+        <put-attribute name="title" value="Advertisement" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/ad_view.jsp" />
+    </definition>
+
+    <!--Advetisement Add Page-->
+    <definition name="ads/create" extends="base.definition">
+        <put-attribute name="title" value="Advertisement Update" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/ad_create.jsp" />
+    </definition>
+
+</tiles-definitions>
